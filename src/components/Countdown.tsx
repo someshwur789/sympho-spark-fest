@@ -45,7 +45,7 @@ const Countdown = () => {
   );
 
   return (
-    <section className="py-20 px-4 bg-background/50">
+    <section className="py-10 px-4 bg-background/50">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-[hsl(var(--countdown-bg))] tracking-wider">
           COUNTDOWN TO EVENTS DAY
