@@ -7,10 +7,12 @@ import Events from "@/components/Events";
 import Gallery from "@/components/Gallery";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
+import AudioPlayer from "@/components/AudioPlayer";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <AudioPlayer />
       <Navbar />
       <Hero />
       <Countdown />
