@@ -7,32 +7,25 @@ const Technical = () => {
 
   const technicalEvents = [
     {
-      id: "coders-chemistry",
-      title: "Coders Chemistry",
-      description: "A competitive programming challenge testing algorithmic thinking and coding skills",
-      tags: ["Technical", "Trojans"],
-      image: "🧪"
+      id: "hack-n-hammer",
+      title: "Hack n Hammer",
+      description: "An intensive hackathon where teams build innovative solutions to real-world problems",
+      tags: ["Hackathon", "Innovation"],
+      image: "🔨"
     },
     {
-      id: "quiztopher",
-      title: "Quiztopher",
-      description: "Technical quiz competition covering AI, Data Science, and Computer Science fundamentals",
-      tags: ["Technical", "Trojans"],
-      image: "🎯"
+      id: "paper-showcase",
+      title: "Paper Showcase",
+      description: "Present your research papers and innovative ideas in AI and Data Science",
+      tags: ["Research", "Presentation"],
+      image: "📄"
     },
     {
-      id: "code-beats",
-      title: "Code Beats",
-      description: "Music meets code in this unique programming challenge with rhythm-based problems",
-      tags: ["Technical", "Trojans"],
-      image: "🎵"
-    },
-    {
-      id: "beyond-visuals",
-      title: "Beyond Your Visuals",
-      description: "Data visualization and UI/UX design competition using cutting-edge tools",
-      tags: ["Technical", "Trojans"],
-      image: "🎨"
+      id: "bytefest",
+      title: "ByteFest",
+      description: "A competitive programming festival with challenging algorithmic problems",
+      tags: ["Programming", "Competition"],
+      image: "💻"
     }
   ];
 
@@ -70,7 +63,7 @@ const Technical = () => {
       {/* Events Grid */}
       <div className="relative z-10 px-4 pb-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {technicalEvents.map((event, index) => (
               <Card
                 key={event.id}

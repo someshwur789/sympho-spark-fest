@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Events = () => {
   const navigate = useNavigate();
@@ -11,6 +13,45 @@ const Events = () => {
   const handleNonTechnicalClick = () => {
     navigate("/non-technical");
   };
+
+  const events = [
+    {
+      type: "technical",
+      title: "Technical",
+      description: "Compete in Hack n Hammer hackathons, present research papers, and participate in ByteFest programming competitions.",
+      image: "/src/assets/event-coding.jpg",
+      borderClass: "border-primary/30",
+      gradientClass: "from-primary/20 to-secondary/20",
+      titleClass: "text-primary",
+      onClick: handleTechnicalClick,
+      ctaText: "Explore Technical Events →",
+      ctaHoverClass: "group-hover:text-primary"
+    },
+    {
+      type: "non-technical", 
+      title: "Non-Technical",
+      description: "Join exciting Esports tournaments and showcase your film knowledge in Cinephile competitions.",
+      image: "/src/assets/event-creative.jpg",
+      borderClass: "border-secondary/30",
+      gradientClass: "from-secondary/20 to-primary/20",
+      titleClass: "text-secondary",
+      onClick: handleNonTechnicalClick,
+      ctaText: "Explore Creative Events →",
+      ctaHoverClass: "group-hover:text-secondary"
+    },
+    {
+      type: "surprise",
+      title: "Surprise Event",
+      description: "Get ready for something extraordinary! A special surprise event that will be revealed soon. Stay tuned for an unforgettable experience.",
+      image: "/src/assets/event-surprise.jpg",
+      borderClass: "border-accent/30",
+      gradientClass: "from-accent/20 to-primary/20",
+      titleClass: "text-accent",
+      onClick: () => {},
+      ctaText: "Coming Soon... 🎉",
+      ctaHoverClass: "group-hover:text-primary"
+    }
+  ];
 
   return (
     <section id="events" className="py-20 px-4 bg-background">
@@ -24,84 +65,48 @@ const Events = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Technical Events Card */}
-          <Card 
-            className="glow-card cursor-pointer group transition-all duration-300 hover:scale-105 bg-card border-primary/30"
-            onClick={handleTechnicalClick}
-          >
-            <CardContent className="p-0">
-              <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-xl overflow-hidden">
-                <img 
-                  src="/src/assets/event-coding.jpg" 
-                  alt="Technical Events" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-primary mb-4">Technical</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Dive deep into cutting-edge technology competitions including coding challenges, 
-                  AI workshops, data science hackathons, and innovative project presentations.
-                </p>
-                <div className="text-secondary font-semibold group-hover:text-primary transition-colors">
-                  Explore Technical Events →
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Non-Technical Events Card */}
-          <Card 
-            className="glow-card cursor-pointer group transition-all duration-300 hover:scale-105 bg-card border-secondary/30"
-            onClick={handleNonTechnicalClick}
-          >
-            <CardContent className="p-0">
-              <div className="h-48 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-t-xl overflow-hidden">
-                <img 
-                  src="/src/assets/event-creative.jpg" 
-                  alt="Non-Technical Events" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-secondary mb-4">Non-Technical</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Showcase your creative side with cultural events, design competitions, 
-                  presentation challenges, and interactive workshops that blend art with technology.
-                </p>
-                <div className="text-primary font-semibold group-hover:text-secondary transition-colors">
-                  Explore Creative Events →
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Surprise Event Card */}
-          <Card 
-            className="glow-card cursor-pointer group transition-all duration-300 hover:scale-105 bg-card border-accent/30"
-          >
-            <CardContent className="p-0">
-              <div className="h-48 bg-gradient-to-br from-accent/20 to-primary/20 rounded-t-xl overflow-hidden">
-                <img 
-                  src="/src/assets/event-surprise.jpg" 
-                  alt="Surprise Event" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6 text-center">
-                <h3 className="text-2xl font-bold text-accent mb-4">Surprise Event</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Get ready for something extraordinary! A special surprise event that will be revealed 
-                  soon. Stay tuned for an unforgettable experience that combines innovation and excitement.
-                </p>
-                <div className="text-accent font-semibold group-hover:text-primary transition-colors">
-                  Coming Soon... 🎉
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        <Carousel
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent>
+            {events.map((event, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <Card 
+                  className={`glow-card cursor-pointer group transition-all duration-300 hover:scale-105 bg-card ${event.borderClass}`}
+                  onClick={event.onClick}
+                >
+                  <CardContent className="p-0">
+                    <div className={`h-48 bg-gradient-to-br ${event.gradientClass} rounded-t-xl overflow-hidden`}>
+                      <img 
+                        src={event.image} 
+                        alt={event.title} 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-6 text-center">
+                      <h3 className={`text-2xl font-bold ${event.titleClass} mb-4`}>
+                        {event.title}
+                      </h3>
+                      <p className="text-muted-foreground mb-6 leading-relaxed">
+                        {event.description}
+                      </p>
+                      <div className={`text-secondary font-semibold ${event.ctaHoverClass} transition-colors`}>
+                        {event.ctaText}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );

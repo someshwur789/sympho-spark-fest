@@ -7,32 +7,18 @@ const NonTechnical = () => {
 
   const nonTechnicalEvents = [
     {
-      id: "creative-design",
-      title: "Creative Design Challenge",
-      description: "Showcase your design skills with AI-generated art and creative digital media",
-      tags: ["Creative", "Design"],
-      image: "🎨"
+      id: "esports",
+      title: "Esports",
+      description: "Compete in popular gaming tournaments and showcase your gaming skills",
+      tags: ["Gaming", "Competition"],
+      image: "🎮"
     },
     {
-      id: "presentation-master",
-      title: "Presentation Master",
-      description: "Present innovative ideas and future tech concepts with compelling storytelling",
-      tags: ["Communication", "Ideas"],
-      image: "🎤"
-    },
-    {
-      id: "tech-debate",
-      title: "Tech Debate Arena",
-      description: "Debate on current technology trends, ethics in AI, and future implications",
-      tags: ["Debate", "Ethics"],
-      image: "🗣️"
-    },
-    {
-      id: "innovation-pitch",
-      title: "Innovation Pitch",
-      description: "Pitch your startup ideas and innovative solutions to real-world problems",
-      tags: ["Entrepreneurship", "Innovation"],
-      image: "💡"
+      id: "cinephile",
+      title: "Cinephile",
+      description: "Film appreciation, movie trivia, and cinematic creativity challenges",
+      tags: ["Film", "Entertainment"],
+      image: "🎬"
     }
   ];
 
@@ -70,7 +56,7 @@ const NonTechnical = () => {
       {/* Events Grid */}
       <div className="relative z-10 px-4 pb-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {nonTechnicalEvents.map((event, index) => (
               <Card
                 key={event.id}

@@ -15,18 +15,13 @@ const Hero = () => {
           <img 
             src={aiuraLogo} 
             alt="AIURA" 
-            className="mx-auto h-24 w-auto mb-4 filter drop-shadow-lg"
+            className="mx-auto h-48 w-auto mb-4 filter drop-shadow-lg animate-spin-slow"
           />
         </div>
-
-        {/* Main Title */}
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 neon-text tracking-wider">
-          AIURA
-        </h1>
         
         {/* Subtitle */}
         <p className="text-xl md:text-2xl lg:text-3xl text-secondary font-semibold mb-4 cyan-text">
-          AI & Data Science Symposium 2024
+          AI & Data Science Symposium 2025
         </p>
         
         {/* Description */}
@@ -55,7 +50,10 @@ const Hero = () => {
         {/* Event Details */}
         <div className="mt-12 text-center">
           <p className="text-lg text-muted-foreground">
-            📅 September 26, 2024 | 🎓 AI & Data Science Department
+            📅 September 26, 2025 | 🎓 Department of Artificial Intelligence and Data Science
+          </p>
+          <p className="text-md text-muted-foreground mt-2">
+            S A Engineering College
           </p>
         </div>
       </div>
