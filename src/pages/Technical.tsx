@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import hackPoster from "@/assets/hack-n-hammer-poster.png";
+import paperPoster from "@/assets/paper-showcase-poster.png";
 
 const Technical = () => {
   const navigate = useNavigate();
@@ -11,14 +13,14 @@ const Technical = () => {
       title: "Hack n Hammer",
       description: "An intensive hackathon where teams build innovative solutions to real-world problems",
       tags: ["Hackathon", "Innovation"],
-      image: "🔨"
+      image: hackPoster
     },
     {
       id: "paper-showcase",
       title: "Paper Showcase",
       description: "Present your research papers and innovative ideas in AI and Data Science",
       tags: ["Research", "Presentation"],
-      image: "📄"
+      image: paperPoster
     },
     {
       id: "bytefest",
@@ -73,8 +75,16 @@ const Technical = () => {
               >
                 <CardContent className="p-0">
                   {/* Event Image/Icon */}
-                  <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-xl flex items-center justify-center">
-                    <div className="text-6xl">{event.image}</div>
+                  <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-xl flex items-center justify-center overflow-hidden">
+                    {typeof event.image === 'string' && event.image.startsWith('/') || event.image.includes('.png') ? (
+                      <img 
+                        src={event.image} 
+                        alt={event.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="text-6xl">{event.image}</div>
+                    )}
                   </div>
                   
                   {/* Event Details */}

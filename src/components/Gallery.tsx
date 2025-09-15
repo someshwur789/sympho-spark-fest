@@ -37,27 +37,14 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className="glow-card group cursor-pointer overflow-hidden rounded-xl aspect-video animate-slide-up"
-              style={{animationDelay: `${index * 0.1}s`}}
-              onClick={() => openModal(image.src)}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-white font-semibold text-lg">{image.alt}</h3>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Gallery Placeholder */}
+        <div className="text-center py-20">
+          <div className="bg-card border border-border rounded-xl p-12 glow-card">
+            <h3 className="text-2xl font-bold text-primary mb-4">Gallery Coming Soon</h3>
+            <p className="text-muted-foreground text-lg">
+              Photos from our events will be updated soon. Stay tuned!
+            </p>
+          </div>
         </div>
 
         {/* Modal for enlarged image */}

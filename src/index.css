@@ -163,12 +163,6 @@ All colors MUST be HSL.
       0 0 30px hsl(280 100% 70%);
   }
 
-  .cyan-text {
-    text-shadow: 
-      0 0 10px hsl(180 100% 50%),
-      0 0 20px hsl(180 100% 50%),
-      0 0 30px hsl(180 100% 50%);
-  }
 
   .glow-card {
     box-shadow: var(--card-glow);
@@ -180,8 +174,4 @@ All colors MUST be HSL.
     box-shadow: var(--neon-glow);
   }
 
-  .cyan-border {
-    border: 2px solid hsl(180 100% 50% / 0.5);
-    box-shadow: var(--cyan-glow);
-  }
 }

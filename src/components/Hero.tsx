@@ -24,7 +24,7 @@ const Hero = () => {
         </div>
         
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl lg:text-3xl text-secondary font-semibold mb-4 cyan-text">
+        <p className="text-xl md:text-2xl lg:text-3xl text-secondary font-semibold mb-4">
           AI & Data Science Symposium 2025
         </p>
         
@@ -45,7 +45,7 @@ const Hero = () => {
           <Button 
             variant="outline" 
             size="lg"
-            className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground px-8 py-3 cyan-border"
+            className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground px-8 py-3"
           >
             View Events
           </Button>
