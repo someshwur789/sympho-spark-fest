@@ -10,12 +10,16 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background"></div>
       
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        {/* Logo */}
-        <div className="mb-8 animate-float">
+        {/* Logo with Circular Animation */}
+        <div className="mb-8 relative">
+          <div className="absolute inset-0 w-64 h-64 mx-auto">
+            <div className="w-full h-full border-2 border-primary/30 rounded-full animate-spin-slow"></div>
+            <div className="absolute inset-4 w-56 h-56 border border-secondary/20 rounded-full animate-spin-reverse"></div>
+          </div>
           <img 
             src={aiuraLogo} 
             alt="AIURA" 
-            className="mx-auto h-48 w-auto mb-4 filter drop-shadow-lg animate-spin-slow"
+            className="relative mx-auto h-64 w-auto filter drop-shadow-lg"
           />
         </div>
         
@@ -53,7 +57,7 @@ const Hero = () => {
             📅 September 26, 2025 | 🎓 Department of Artificial Intelligence and Data Science
           </p>
           <p className="text-md text-muted-foreground mt-2">
-            S A Engineering College
+            S A Engineering College, Avadi
           </p>
         </div>
       </div>

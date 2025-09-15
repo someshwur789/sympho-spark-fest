@@ -19,7 +19,7 @@ const Events = () => {
       type: "technical",
       title: "Technical",
       description: "Compete in Hack n Hammer hackathons, present research papers, and participate in ByteFest programming competitions.",
-      image: "/src/assets/event-coding.jpg",
+      image: "/src/assets/tech-non-tech-poster.png",
       borderClass: "border-primary/30",
       gradientClass: "from-primary/20 to-secondary/20",
       titleClass: "text-primary",
@@ -31,25 +31,13 @@ const Events = () => {
       type: "non-technical", 
       title: "Non-Technical",
       description: "Join exciting Esports tournaments and showcase your film knowledge in Cinephile competitions.",
-      image: "/src/assets/event-creative.jpg",
+      image: "/src/assets/tech-non-tech-poster.png",
       borderClass: "border-secondary/30",
       gradientClass: "from-secondary/20 to-primary/20",
       titleClass: "text-secondary",
       onClick: handleNonTechnicalClick,
       ctaText: "Explore Creative Events →",
       ctaHoverClass: "group-hover:text-secondary"
-    },
-    {
-      type: "surprise",
-      title: "Surprise Event",
-      description: "Get ready for something extraordinary! A special surprise event that will be revealed soon. Stay tuned for an unforgettable experience.",
-      image: "/src/assets/event-surprise.jpg",
-      borderClass: "border-accent/30",
-      gradientClass: "from-accent/20 to-primary/20",
-      titleClass: "text-accent",
-      onClick: () => {},
-      ctaText: "Coming Soon... 🎉",
-      ctaHoverClass: "group-hover:text-primary"
     }
   ];
 
@@ -75,7 +63,7 @@ const Events = () => {
         >
           <CarouselContent>
             {events.map((event, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="md:basis-1/2">
                 <Card 
                   className={`glow-card cursor-pointer group transition-all duration-300 hover:scale-105 bg-card ${event.borderClass}`}
                   onClick={event.onClick}

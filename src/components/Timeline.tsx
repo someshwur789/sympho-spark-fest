@@ -1,38 +1,38 @@
 const Timeline = () => {
   const timelineEvents = [
     {
-      title: "PAPER PRESENTATION",
-      description: "Showcase of innovative engineering ideas and research.",
+      title: "REGISTRATION",
+      description: "Welcome participants and collect registration details.",
       image: "/src/assets/timeline-presentation.jpg",
       side: "left"
     },
     {
-      title: "AI WORKSHOP",
-      description: "Hands-on machine learning and deep learning sessions.",
+      title: "INAUGURATION",
+      description: "Official opening ceremony with welcome address.",
       image: "/src/assets/timeline-workshop.jpg",
       side: "right"
     },
     {
-      title: "CODING COMPETITION",
-      description: "High-speed programming challenges testing creativity and precision.",
+      title: "TECH & NON-TECH EVENTS BEGIN",
+      description: "Technical and non-technical competitions commence.",
       image: "/src/assets/event-coding.jpg",
       side: "left"
     },
     {
-      title: "DATA SCIENCE HACKATHON",
-      description: "24-hour intensive data analysis and modeling competition.",
+      title: "LUNCH",
+      description: "Break for refreshments and networking.",
       image: "/src/assets/timeline-hackathon.jpg",
       side: "right"
     },
     {
-      title: "KEYNOTE SPEAKERS",
-      description: "Industry leaders sharing insights on AI and future technologies.",
+      title: "EVENTS CONTINUE",
+      description: "Afternoon session of competitions and presentations.",
       image: "/src/assets/event-ai.jpg",
       side: "left"
     },
     {
-      title: "NETWORKING SESSION",
-      description: "Connect with peers, mentors, and industry professionals.",
+      title: "PRIZE DISTRIBUTION",
+      description: "Award ceremony and closing remarks.",
       image: "/src/assets/gallery-1.jpg",
       side: "right"
     }
