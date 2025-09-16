@@ -9,73 +9,230 @@ const EventRules = () => {
   const eventRules = {
     "hack-n-hammer": {
       title: "Hack n Hammer",
-      description: "An intensive hackathon where teams build innovative solutions to real-world problems",
-      rules: [
-        "Teams can have 2-4 members",
-        "Duration: 24 hours",
-        "All code must be written during the hackathon",
-        "Use of external APIs and libraries is allowed",
-        "Final submission must include source code and demo",
-        "Projects will be judged on innovation, technical implementation, and presentation"
+      description: "An intensive hackathon where teams build innovative solutions to real-world problems using cutting-edge technologies and creative problem-solving approaches.",
+      timing: "24 hrs",
+      duration: "9:00am - 9:00am (Next Day)",
+      teamSize: "2-4 Members",
+      generalRules: [
+        "EACH TEAM SHOULD CONSIST OF 2-4 MEMBERS.",
+        "ALL CODE MUST BE WRITTEN DURING THE HACKATHON.",
+        "USE OF EXTERNAL APIs AND LIBRARIES IS ALLOWED.",
+        "FINAL SUBMISSION MUST INCLUDE SOURCE CODE AND DEMO.",
+        "PROJECTS WILL BE JUDGED ON INNOVATION, TECHNICAL IMPLEMENTATION, AND PRESENTATION."
       ],
-      prizes: ["First Prize: ₹25,000", "Second Prize: ₹15,000", "Third Prize: ₹10,000"],
-      contact: "hackathon@saec.ac.in"
+      rounds: [
+        {
+          title: "PROBLEM STATEMENT RELEASE",
+          details: [
+            "• PROBLEM STATEMENTS WILL BE RELEASED AT THE START OF THE HACKATHON.",
+            "• TEAMS CAN CHOOSE FROM MULTIPLE PROBLEM DOMAINS.",
+            "• PLANNING AND IDEATION PHASE BEGINS.",
+            "• THE TIME DURATION FOR THIS PHASE IS 2 HOURS."
+          ]
+        },
+        {
+          title: "DEVELOPMENT PHASE",
+          details: [
+            "• TEAMS START BUILDING THEIR SOLUTIONS.",
+            "• MENTORS WILL BE AVAILABLE FOR GUIDANCE.",
+            "• REGULAR CHECK-INS WITH ORGANIZERS.",
+            "• THE TIME DURATION FOR THIS PHASE IS 20 HOURS."
+          ]
+        },
+        {
+          title: "PRESENTATION & JUDGING",
+          details: [
+            "• TEAMS PRESENT THEIR FINAL SOLUTIONS.",
+            "• DEMO AND Q&A SESSION WITH JUDGES.",
+            "• JUDGING BASED ON INNOVATION, FEASIBILITY, AND PRESENTATION.",
+            "• THE TIME DURATION FOR THIS PHASE IS 2 HOURS."
+          ]
+        }
+      ],
+      coordinators: [
+        { name: "DHARSHINI SHREE", phone: "9395956542" },
+        { name: "RAJKUMAR", phone: "9576981801" },
+        { name: "BALA KUMAR", phone: "8183334200" }
+      ]
     },
     "paper-showcase": {
       title: "Paper Showcase",
-      description: "Present your research papers and innovative ideas in AI and Data Science",
-      rules: [
-        "Individual or team presentations (max 3 members)",
-        "Presentation duration: 10-15 minutes",
-        "Research should be original and unpublished",
-        "Topics must be related to AI, ML, or Data Science",
-        "Submit abstract 1 week before the event",
-        "PowerPoint presentation required"
+      description: "Present your research papers and innovative ideas in AI and Data Science to a panel of experts and fellow researchers in an academic symposium format.",
+      timing: "3 hrs",
+      duration: "10:00am - 1:00pm",
+      teamSize: "1-3 Members",
+      generalRules: [
+        "INDIVIDUAL OR TEAM PRESENTATIONS (MAX 3 MEMBERS).",
+        "RESEARCH SHOULD BE ORIGINAL AND UNPUBLISHED.",
+        "TOPICS MUST BE RELATED TO AI, ML, OR DATA SCIENCE.",
+        "SUBMIT ABSTRACT 1 WEEK BEFORE THE EVENT.",
+        "POWERPOINT PRESENTATION REQUIRED."
       ],
-      prizes: ["Best Paper: ₹15,000", "Second Best: ₹10,000", "Third Best: ₹5,000"],
-      contact: "research@saec.ac.in"
+      rounds: [
+        {
+          title: "ABSTRACT SUBMISSION",
+          details: [
+            "• SUBMIT 500-WORD ABSTRACT OF YOUR RESEARCH.",
+            "• INCLUDE METHODOLOGY AND EXPECTED OUTCOMES.",
+            "• ABSTRACTS WILL BE REVIEWED BY ACADEMIC PANEL.",
+            "• DEADLINE: 1 WEEK BEFORE EVENT."
+          ]
+        },
+        {
+          title: "PRESENTATION ROUND",
+          details: [
+            "• 15-MINUTE PRESENTATION FOLLOWED BY 5-MINUTE Q&A.",
+            "• USE OF VISUAL AIDS AND DEMONSTRATIONS ENCOURAGED.",
+            "• JUDGING BASED ON ORIGINALITY, METHODOLOGY, AND CLARITY.",
+            "• THE TIME DURATION FOR EACH PRESENTATION IS 20 MINUTES."
+          ]
+        }
+      ],
+      coordinators: [
+        { name: "DHARSHINI SHREE", phone: "9395956542" },
+        { name: "SRIJA", phone: "8015066653" }
+      ]
     },
     "bytefest": {
       title: "ByteFest",
-      description: "A competitive programming festival with challenging algorithmic problems",
-      rules: [
-        "Individual participation only",
-        "Duration: 3 hours",
-        "Multiple rounds with increasing difficulty",
-        "Use of any IDE is allowed",
-        "Internet access restricted to documentation only",
-        "Scoring based on correctness and time taken"
+      description: "A competitive programming festival with challenging algorithmic problems that tests your coding skills, problem-solving abilities, and algorithmic thinking.",
+      timing: "3 hrs",
+      duration: "2:00pm - 5:00pm",
+      teamSize: "Individual",
+      generalRules: [
+        "INDIVIDUAL PARTICIPATION ONLY.",
+        "MULTIPLE ROUNDS WITH INCREASING DIFFICULTY.", 
+        "USE OF ANY IDE IS ALLOWED.",
+        "INTERNET ACCESS RESTRICTED TO DOCUMENTATION ONLY.",
+        "SCORING BASED ON CORRECTNESS AND TIME TAKEN."
       ],
-      prizes: ["Winner: ₹20,000", "Runner-up: ₹12,000", "Third Place: ₹8,000"],
-      contact: "coding@saec.ac.in"
+      rounds: [
+        {
+          title: "ROUND 1: WARM-UP",
+          details: [
+            "• BASIC ALGORITHMIC PROBLEMS TO GET STARTED.",
+            "• FOCUS ON IMPLEMENTATION AND LOGIC BUILDING.",
+            "• 5 PROBLEMS TO SOLVE IN THE GIVEN TIME.",
+            "• THE TIME DURATION FOR THIS ROUND IS 45 MINUTES."
+          ]
+        },
+        {
+          title: "ROUND 2: INTERMEDIATE",
+          details: [
+            "• MEDIUM DIFFICULTY PROBLEMS INVOLVING DATA STRUCTURES.",
+            "• OPTIMAL SOLUTIONS REQUIRED FOR BETTER SCORING.",
+            "• 4 PROBLEMS WITH VARYING DIFFICULTY LEVELS.",
+            "• THE TIME DURATION FOR THIS ROUND IS 60 MINUTES."
+          ]
+        },
+        {
+          title: "ROUND 3: ADVANCED",
+          details: [
+            "• COMPLEX ALGORITHMIC CHALLENGES AND OPTIMIZATION.",
+            "• ADVANCED DATA STRUCTURES AND ALGORITHM CONCEPTS.",
+            "• 3 CHALLENGING PROBLEMS FOR FINAL RANKING.",
+            "• THE TIME DURATION FOR THIS ROUND IS 75 MINUTES."
+          ]
+        }
+      ],
+      coordinators: [
+        { name: "RAJKUMAR", phone: "9576981801" },
+        { name: "BALA KUMAR", phone: "8183334200" }
+      ]
     },
     "esports": {
       title: "Esports",
-      description: "Gaming competitions across multiple popular titles",
-      rules: [
-        "Team size varies by game (1v1, 5v5)",
-        "Bring your own devices (BYOD)",
-        "Multiple game categories available",
-        "Tournament bracket format",
-        "Fair play and sportsmanship required",
-        "No external assistance during matches"
+      description: "Gaming competitions across multiple popular titles featuring intense matches, strategic gameplay, and competitive gaming at its finest.",
+      timing: "6 hrs",
+      duration: "10:00am - 4:00pm",
+      teamSize: "Varies by Game",
+      generalRules: [
+        "TEAM SIZE VARIES BY GAME (1V1, 5V5).",
+        "BRING YOUR OWN DEVICES (BYOD).",
+        "MULTIPLE GAME CATEGORIES AVAILABLE.",
+        "TOURNAMENT BRACKET FORMAT.",
+        "FAIR PLAY AND SPORTSMANSHIP REQUIRED."
       ],
-      prizes: ["Champions: ₹18,000", "Runners-up: ₹12,000", "Semi-finalists: ₹6,000"],
-      contact: "esports@saec.ac.in"
+      rounds: [
+        {
+          title: "GAME SELECTION & REGISTRATION",
+          details: [
+            "• CHOOSE FROM AVAILABLE GAME TITLES.",
+            "• FORM TEAMS ACCORDING TO GAME REQUIREMENTS.",
+            "• EQUIPMENT CHECK AND SETUP.",
+            "• THE TIME DURATION FOR THIS PHASE IS 30 MINUTES."
+          ]
+        },
+        {
+          title: "QUALIFICATION ROUNDS",
+          details: [
+            "• INITIAL MATCHES TO DETERMINE TOURNAMENT BRACKETS.",
+            "• BEST-OF-THREE FORMAT FOR TEAM GAMES.",
+            "• ELIMINATION BASED ON PERFORMANCE.",
+            "• THE TIME DURATION FOR THIS PHASE IS 3 HOURS."
+          ]
+        },
+        {
+          title: "FINALS & CHAMPIONSHIP",
+          details: [
+            "• TOP TEAMS COMPETE FOR THE CHAMPIONSHIP.",
+            "• BEST-OF-FIVE FORMAT FOR FINAL MATCHES.",
+            "• LIVE STREAMING AND COMMENTARY.",
+            "• THE TIME DURATION FOR THIS PHASE IS 2.5 HOURS."
+          ]
+        }
+      ],
+      coordinators: [
+        { name: "DHARSHINI SHREE", phone: "9395956542" },
+        { name: "SRIJA", phone: "8015066653" }
+      ]
     },
     "cinephile": {
       title: "Cinephile",
-      description: "Test your movie knowledge and film-making skills",
-      rules: [
-        "Individual or team participation (max 3 members)",
-        "Multiple rounds: Quiz, Scene recreation, Trivia",
-        "Cover all genres and eras of cinema",
-        "Props and costumes allowed for scene recreation",
-        "No mobile phones during quiz rounds",
-        "Judging based on accuracy and creativity"
+      description: "Test your movie knowledge and film-making skills in this comprehensive cinema-focused competition covering all aspects of film appreciation and creation.",
+      timing: "4 hrs",
+      duration: "1:00pm - 5:00pm", 
+      teamSize: "1-3 Members",
+      generalRules: [
+        "INDIVIDUAL OR TEAM PARTICIPATION (MAX 3 MEMBERS).",
+        "COVER ALL GENRES AND ERAS OF CINEMA.",
+        "PROPS AND COSTUMES ALLOWED FOR SCENE RECREATION.",
+        "NO MOBILE PHONES DURING QUIZ ROUNDS.",
+        "JUDGING BASED ON ACCURACY AND CREATIVITY."
       ],
-      prizes: ["Movie Buffs: ₹15,000", "Cinema Lovers: ₹10,000", "Film Fans: ₹5,000"],
-      contact: "cinema@saec.ac.in"
+      rounds: [
+        {
+          title: "ROUND 1: MOVIE QUIZ",
+          details: [
+            "• QUESTIONS COVERING HOLLYWOOD, BOLLYWOOD, AND REGIONAL CINEMA.",
+            "• AUDIO-VISUAL ROUNDS WITH MOVIE CLIPS AND SOUNDTRACKS.",
+            "• RAPID FIRE ROUND FOR BONUS POINTS.",
+            "• THE TIME DURATION FOR THIS ROUND IS 90 MINUTES."
+          ]
+        },
+        {
+          title: "ROUND 2: SCENE RECREATION",
+          details: [
+            "• RECREATE FAMOUS MOVIE SCENES WITH YOUR TEAM.",
+            "• PROPS AND COSTUMES PROVIDED OR BRING YOUR OWN.",
+            "• JUDGED ON ACCURACY, CREATIVITY, AND PERFORMANCE.",
+            "• THE TIME DURATION FOR THIS ROUND IS 120 MINUTES."
+          ]
+        },
+        {
+          title: "ROUND 3: FILM TRIVIA SHOWDOWN",
+          details: [
+            "• FINAL ROUND WITH CHALLENGING CINEMA TRIVIA.",
+            "• BEHIND-THE-SCENES FACTS AND MOVIE PRODUCTION DETAILS.",
+            "• DETERMINING THE ULTIMATE CINEPHILE CHAMPIONS.",
+            "• THE TIME DURATION FOR THIS ROUND IS 30 MINUTES."
+          ]
+        }
+      ],
+      coordinators: [
+        { name: "DHARSHINI SHREE", phone: "9395956542" },
+        { name: "BALA KUMAR", phone: "8183334200" }
+      ]
     }
   };
 
@@ -123,50 +280,109 @@ const EventRules = () => {
         </div>
       </div>
 
-      {/* Rules Content */}
-      <div className="relative z-10 px-4 pb-20">
+      {/* Event Info Cards */}
+      <div className="relative z-10 px-4 pb-8">
         <div className="max-w-4xl mx-auto">
-          <div className="grid gap-8">
-            {/* Rules */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {/* Timing Card */}
             <Card className="glow-card bg-card border-primary/30">
-              <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-primary mb-6">Rules & Regulations</h2>
-                <ul className="space-y-3">
-                  {event.rules.map((rule, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="text-secondary mr-3 font-bold">{index + 1}.</span>
-                      <span className="text-muted-foreground">{rule}</span>
-                    </li>
-                  ))}
-                </ul>
+              <CardContent className="p-6 text-center">
+                <div className="text-primary mb-2">🕐</div>
+                <h3 className="text-sm text-muted-foreground uppercase tracking-wider mb-2">Timing</h3>
+                <p className="text-2xl font-bold text-foreground">{event.timing}</p>
               </CardContent>
             </Card>
 
-            {/* Prizes */}
-            <Card className="glow-card bg-card border-secondary/30">
+            {/* Duration Card */}
+            <Card className="glow-card bg-card border-primary/30">
+              <CardContent className="p-6 text-center">
+                <div className="text-primary mb-2">📅</div>
+                <h3 className="text-sm text-muted-foreground uppercase tracking-wider mb-2">Duration</h3>
+                <p className="text-lg font-bold text-foreground">{event.duration}</p>
+              </CardContent>
+            </Card>
+
+            {/* Team Size Card */}
+            <Card className="glow-card bg-card border-primary/30">
+              <CardContent className="p-6 text-center">
+                <div className="text-primary mb-2">👥</div>
+                <h3 className="text-sm text-muted-foreground uppercase tracking-wider mb-2">Team Size</h3>
+                <p className="text-2xl font-bold text-foreground">{event.teamSize}</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      {/* Event Content */}
+      <div className="relative z-10 px-4 pb-20">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid gap-8">
+            {/* Event Description */}
+            <Card className="glow-card bg-card border-primary/30">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-secondary mb-6">Prizes</h2>
-                <div className="grid gap-4">
-                  {event.prizes.map((prize, index) => (
-                    <div key={index} className="flex items-center justify-between bg-secondary/10 rounded-lg p-4">
-                      <span className="text-foreground font-medium">{prize}</span>
-                      <span className="text-secondary">🏆</span>
+                <h2 className="text-2xl font-bold text-primary mb-6">Event Description:</h2>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  {event.description}
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Rules & Guidelines */}
+            <Card className="glow-card bg-card border-primary/30">
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold text-primary mb-6">Rules & Guidelines</h2>
+                
+                {/* General Rules */}
+                <div className="mb-8">
+                  <h3 className="text-xl font-bold text-secondary mb-4">GENERAL RULES:</h3>
+                  <ul className="space-y-2">
+                    {event.generalRules.map((rule, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-secondary mr-3">•</span>
+                        <span className="text-muted-foreground">{rule}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Rounds */}
+                {event.rounds.map((round, index) => (
+                  <div key={index} className="mb-6">
+                    <h3 className="text-xl font-bold text-secondary mb-4">{round.title}:</h3>
+                    <ul className="space-y-2">
+                      {round.details.map((detail, detailIndex) => (
+                        <li key={detailIndex} className="text-muted-foreground">
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            {/* Coordinators */}
+            <Card className="glow-card bg-card border-primary/30">
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold text-primary mb-6">Coordinators:</h2>
+                <div className="space-y-4">
+                  {event.coordinators.map((coordinator, index) => (
+                    <div key={index} className="flex justify-between items-center bg-secondary/10 rounded-lg p-4">
+                      <span className="text-foreground font-medium text-lg">{coordinator.name}</span>
+                      <span className="text-secondary font-bold">{coordinator.phone}</span>
                     </div>
                   ))}
                 </div>
               </CardContent>
             </Card>
 
-            {/* Contact */}
-            <Card className="glow-card bg-card border-primary/30">
-              <CardContent className="p-8">
-                <h2 className="text-2xl font-bold text-primary mb-4">Contact</h2>
-                <p className="text-muted-foreground">
-                  For queries and registrations: <br />
-                  <span className="text-secondary font-medium">{event.contact}</span>
-                </p>
-              </CardContent>
-            </Card>
+            {/* Register Button */}
+            <div className="text-center">
+              <button className="bg-gradient-to-r from-primary to-secondary text-white px-12 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300">
+                Register for Event
+              </button>
+            </div>
           </div>
         </div>
       </div>
