@@ -14,11 +14,15 @@ const Events = () => {
     navigate("/non-technical");
   };
 
+  const handleSurpriseClick = () => {
+    // Coming soon functionality
+  };
+
   const events = [
     {
       type: "technical",
       title: "Technical",
-      description: "Compete in Hack n Hammer hackathons, present research papers, and participate in ByteFest programming competitions.",
+      description: "Dive deep into cutting-edge technology competitions including coding challenges, AI workshops, data science hackathons, and innovative project presentations.",
       image: "/src/assets/tech-non-tech-poster.png",
       borderClass: "border-primary/30",
       gradientClass: "from-primary/20 to-secondary/20",
@@ -30,7 +34,7 @@ const Events = () => {
     {
       type: "non-technical", 
       title: "Non-Technical",
-      description: "Join exciting Esports tournaments and showcase your film knowledge in Cinephile competitions.",
+      description: "Showcase your creative side with cultural events, design competitions, presentation challenges, and interactive workshops that blend art with technology.",
       image: "/src/assets/tech-non-tech-poster.png",
       borderClass: "border-secondary/30",
       gradientClass: "from-secondary/20 to-primary/20",
@@ -38,6 +42,18 @@ const Events = () => {
       onClick: handleNonTechnicalClick,
       ctaText: "Explore Creative Events →",
       ctaHoverClass: "group-hover:text-secondary"
+    },
+    {
+      type: "surprise",
+      title: "Surprise Event",
+      description: "Get ready for something extraordinary! A special surprise event that will be revealed soon. Stay tuned for an unforgettable experience that combines innovation and excitement.",
+      image: "🎉",
+      borderClass: "border-accent/30",
+      gradientClass: "from-accent/20 to-primary/20",
+      titleClass: "text-accent",
+      onClick: handleSurpriseClick,
+      ctaText: "Coming Soon... 🎊",
+      ctaHoverClass: "group-hover:text-accent"
     }
   ];
 
@@ -63,19 +79,23 @@ const Events = () => {
         >
           <CarouselContent>
             {events.map((event, index) => (
-              <CarouselItem key={index} className="md:basis-1/2">
+              <CarouselItem key={index} className="md:basis-1/3">
                 <Card 
                   className={`glow-card cursor-pointer group transition-all duration-300 hover:scale-105 bg-card ${event.borderClass}`}
                   onClick={event.onClick}
                 >
                   <CardContent className="p-0">
-                    <div className={`h-48 bg-gradient-to-br ${event.gradientClass} rounded-t-xl overflow-hidden`}>
-                      <img 
-                        src={event.image} 
-                        alt={event.title} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                     <div className={`h-48 bg-gradient-to-br ${event.gradientClass} rounded-t-xl overflow-hidden flex items-center justify-center`}>
+                       {event.image.startsWith('/') ? (
+                         <img 
+                           src={event.image} 
+                           alt={event.title} 
+                           className="w-full h-full object-cover"
+                         />
+                       ) : (
+                         <div className="text-6xl">{event.image}</div>
+                       )}
+                     </div>
                     <div className="p-6 text-center">
                       <h3 className={`text-2xl font-bold ${event.titleClass} mb-4`}>
                         {event.title}

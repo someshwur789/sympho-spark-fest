@@ -32,7 +32,7 @@ const Technical = () => {
   ];
 
   const handleEventClick = (eventId: string) => {
-    navigate(`/event/${eventId}`);
+    navigate(`/event-rules/${eventId}`);
   };
 
   return (

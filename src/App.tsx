@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Technical from "./pages/Technical";
 import NonTechnical from "./pages/NonTechnical";
 import EventDetail from "./pages/EventDetail";
+import EventRules from "./pages/EventRules";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/technical" element={<Technical />} />
           <Route path="/non-technical" element={<NonTechnical />} />
           <Route path="/event/:eventId" element={<EventDetail />} />
+          <Route path="/event-rules/:eventId" element={<EventRules />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
