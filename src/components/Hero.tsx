@@ -6,9 +6,6 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="starfield"></div>
       
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background"></div>
-      
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         {/* Logo with Circular Animation */}
         <div className="mb-8 relative">
