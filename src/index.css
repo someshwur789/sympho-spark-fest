@@ -174,4 +174,63 @@ All colors MUST be HSL.
     box-shadow: var(--neon-glow);
   }
 
+  /* Responsive Design Utilities */
+  @media (max-width: 640px) {
+    .responsive-text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+    
+    .responsive-padding-sm {
+      padding: 1rem;
+    }
+    
+    .responsive-margin-sm {
+      margin: 0.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .responsive-grid-sm {
+      grid-template-columns: 1fr;
+    }
+    
+    .responsive-flex-col-sm {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .responsive-grid-md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Enhanced animations */
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes spin-reverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: var(--neon-glow); }
+    50% { box-shadow: 0 0 30px hsl(280 100% 70% / 0.8); }
+  }
+
 }
+
+/* Responsive utilities */
+.animate-spin-slow { animation: spin-slow 3s linear infinite; }
+.animate-spin-reverse { animation: spin-reverse 2s linear infinite; }
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
