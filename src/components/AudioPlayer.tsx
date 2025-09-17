@@ -40,7 +40,7 @@ const AudioPlayer = () => {
       </Button>
       <audio
         ref={audioRef}
-        src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav"
+        src="https://www.soundjay.com/misc/sounds/wind-chimes-1.wav"
         preload="auto"
       />
     </div>
