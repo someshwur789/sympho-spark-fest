@@ -174,7 +174,22 @@ All colors MUST be HSL.
     box-shadow: var(--neon-glow);
   }
 
-  /* Responsive Design Utilities */
+  /* Enhanced Responsive Design Utilities */
+  @media (max-width: 480px) {
+    .responsive-text-xs {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+    
+    .responsive-padding-xs {
+      padding: 0.75rem;
+    }
+    
+    .responsive-gap-xs {
+      gap: 0.5rem;
+    }
+  }
+
   @media (max-width: 640px) {
     .responsive-text-sm {
       font-size: 0.875rem;
@@ -188,6 +203,10 @@ All colors MUST be HSL.
     .responsive-margin-sm {
       margin: 0.5rem;
     }
+    
+    .responsive-grid-1 {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (max-width: 768px) {
@@ -198,11 +217,50 @@ All colors MUST be HSL.
     .responsive-flex-col-sm {
       flex-direction: column;
     }
+    
+    .responsive-text-center-sm {
+      text-align: center;
+    }
   }
 
   @media (max-width: 1024px) {
     .responsive-grid-md {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Enhanced mobile-first approach for all components */
+  @media (max-width: 375px) {
+    /* Extra small devices */
+    html {
+      font-size: 14px;
+    }
+    
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @media (min-width: 376px) and (max-width: 640px) {
+    /* Small devices */
+    .grid-responsive {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+  }
+
+  /* Ensure proper text wrapping and overflow handling */
+  .text-responsive {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Better touch targets for mobile */
+  @media (max-width: 768px) {
+    button, .button, [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
     }
   }
 
